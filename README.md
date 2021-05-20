@@ -2,8 +2,9 @@
 This repo is my Final Project for IST 363: Advance Front-end Web Development class at iSchool@Syracuse University.
 
 # What technology stacks I use or learn here?
-- This is work is based on [Learn Next.js](https://nextjs.org/learn).
-- WordPress as a 'Back-End'
+- This work is based on [Learn Next.js](https://nextjs.org/learn).
+- a WordPress site as a 'Back-End'
+    The WordPress site contain these plugins:
     - ACF Post-2-Post
     - Advanced Custom Fields PRO
     - WP GraphQL
@@ -11,11 +12,11 @@ This repo is my Final Project for IST 363: Advance Front-end Web Development cla
 - [SASS](https://github.com/sass/sass) a CSS preprocessor
 
 # Current Status
-This Final Project is about to finished.
+This Final Project is finished.
 This project is not intended to be used in production.
 
 # Use?
-- You need to Configure a compatible WordPress site (with right plugin and current GraphicQL API)
+- You need to Configure a compatible WordPress site (with right plugin and correct GraphicQL API)
 - You will need to install all required Node.JS packages via npm
 - You established connection to the WordPress by copy and fill in the '.env.local' file
 
