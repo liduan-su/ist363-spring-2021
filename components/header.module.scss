@@ -1,0 +1,10 @@
+$starbucks_green: #008248;
+
+.header {
+    background-color: $starbucks_green;
+    padding: 1rem;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
