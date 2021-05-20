@@ -75,7 +75,6 @@ export default function LocationItem({locationItemData}) {
                     </Row>
                 </Section>
             })}
-            <Heading type="h1">People</Heading>
             
         </Layout>
     )
