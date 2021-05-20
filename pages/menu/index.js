@@ -1,4 +1,5 @@
-import Layout from '../../components/layout'
+import Layout, { siteTitle } from '../../components/layout'
+import Head from 'next/head'
 import Card from '../../components/card'
 import Row from '../../components/row'
 import Col from '../../components/col'
@@ -15,8 +16,11 @@ export async function getStaticProps() {
 export default function Menu({menuTypes}) {
     return (
         <Layout>
+            <Head>
+                <title>{siteTitle} - Menu</title>
+            </Head>
             <h1>Menu</h1>
-            <p>This is the menu introduction.</p>
+            <p>See what we provide for you.</p>
             {menuTypes.edges.map(edge=> {
                 const {name, items} = edge.node;
                 return <Section title={name}>

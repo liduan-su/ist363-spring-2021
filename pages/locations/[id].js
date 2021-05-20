@@ -1,4 +1,5 @@
-import Layout from '../../components/layout';
+import Layout, { siteTitle } from '../../components/layout'
+import Head from 'next/head'
 import Image from 'next/image';
 import Link from 'next/link';
 import Section from '../../components/section';
@@ -42,9 +43,16 @@ export default function LocationItem({locationItemData}) {
 
     return (
         <Layout>
-            <Link href='/locations'>
-                <a>Back to menu</a>
-            </Link>
+            <Head>
+                <title>{siteTitle} - {title} </title>
+            </Head>
+            <Row>
+                <Col>
+                    <Link href='/locations'>
+                        <a>See our other locations</a>
+                    </Link>
+                </Col>
+            </Row>
             <Image 
                 src={sourceUrl}
                 width={width}

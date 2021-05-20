@@ -1,14 +1,14 @@
-import Layout from "../components/layout";
+import Layout, {siteTitle} from "../components/layout";
 import Head from 'next/head'
 
 export default function About() {
     return (
         <Layout>
             <Head>
-                <title>About | Liwen Duan</title>
+                <title>{siteTitle} - About </title>
             </Head>
-            <h1>About me</h1>
-            <p>Content goes here</p>
+            <h1>About</h1>
+            <p>This is a simple rebuild of the Starbucks website. This project is intended to be used within the academic settings</p>
         </Layout>
     )
 }

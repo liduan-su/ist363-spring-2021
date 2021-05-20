@@ -8,19 +8,18 @@ import Footer from './footer'
 
 import styles from './layout.module.css'
 
-const name = 'Liwen Duan'
-export const siteTitle = 'A Next.js Sample Website'
+export const siteTitle = 'Starbucks'
 
 export default function Layout({ children, home }) {
   return (
-    <Container>
+    <>
       <Head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/images/starbucks-logo.svg" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"></link>
         <meta
           name="description"
-          content="Learn how to build a personal website using Next.js"
+          content="This is a simple rebuild of a Starbucks website"
         />
         <meta
           property="og:image"
@@ -32,8 +31,10 @@ export default function Layout({ children, home }) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <Header />
-      <main>{children}</main>
+      <Container>
+        <main>{children}</main> 
+      </Container>
       <Footer />
-    </Container>
+    </>
   )
 }

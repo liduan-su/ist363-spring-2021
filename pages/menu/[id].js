@@ -1,6 +1,9 @@
-import Layout from '../../components/layout';
+import Layout, { siteTitle } from '../../components/layout'
+import Head from 'next/head'
 import Image from 'next/image';
 import Link from 'next/link';
+import Row from '../../components/row';
+import Col from '../../components/col';
 import {getAllMenuItemSlugs, getMenuItemBySlug} from '../../lib/api';
 
 export async function getStaticPaths() {
@@ -38,9 +41,17 @@ export default function MenuItem({menuItemData}) {
 
     return (
         <Layout>
-            <Link href='/menu'>
-                <a>Back to menu</a>
-            </Link>
+            <Head>
+                <title>{siteTitle} - {title} </title>
+            </Head>
+            <Row>
+                <Col>
+                    <Link href='/menu'>
+                        <a>Back to menu</a>
+                    </Link>
+                </Col>
+            </Row>
+
             <Image 
                 src={sourceUrl}
                 width={width}

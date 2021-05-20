@@ -1,5 +1,6 @@
 import Heading from '../../components/heading';
-import Layout from '../../components/layout';
+import Layout, { siteTitle } from '../../components/layout'
+import Head from 'next/head'
 import Row from '../../components/row';
 import Col from '../../components/col'
 import Card from '../../components/card'
@@ -15,6 +16,9 @@ export async function getStaticProps() {
 export default function Locations ({locations}) {
     return (
         <Layout>
+            <Head>
+                <title>{siteTitle} - Locations</title>
+            </Head>
             <Heading type='h1'>Locations</Heading>
             <p>Check out our store across the country.</p>
             <Row>
