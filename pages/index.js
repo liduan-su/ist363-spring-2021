@@ -13,7 +13,10 @@ export default function Home() {
         <p>A Web Designer</p>
         <Button label="View Portfolio" href="/portfolio" type="primary"/>
         <Button label="View Menu" href="/menu" type="primary"/>
+        <Button label="View Locations" href="/locations" type="primary"/>
+        <Button label="Meet our Team" href="/people" type="primary"/>
         <Button label="About" href="/about" type="secondary"/>
+
       </section>
     </Layout>
   )
