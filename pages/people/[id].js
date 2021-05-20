@@ -1,11 +1,9 @@
-import Layout from '../../components/layout';
+import Layout, { siteTitle } from '../../components/layout'
+import Head from 'next/head'
 import Image from 'next/image';
 import Link from 'next/link';
-import Section from '../../components/section';
-import Card from '../../components/card';
 import Row from '../../components/row';
 import Col from '../../components/col';
-import Heading from '../../components/heading';
 import {getPeopleList, getPeopleListBySlug} from '../../lib/api';
 
 export async function getStaticPaths() {
@@ -41,9 +39,16 @@ export default function peopleItem({personItemData}) {
 
     return (
         <Layout>
-            <Link href='/people'>
-                <a>Back to menu</a>
-            </Link>
+            <Head>
+                <title>{siteTitle} - {title} </title>
+            </Head>
+            <Row>
+                <Col>
+                    <Link href='/people'>
+                        <a>See other team members</a>
+                    </Link>
+                </Col>
+            </Row>
             <Image 
                 src={sourceUrl}
                 width={width}

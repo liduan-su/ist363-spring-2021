@@ -1,4 +1,5 @@
-import Layout from '../../components/layout'
+import Layout, { siteTitle } from '../../components/layout'
+import Head from 'next/head'
 import Card from '../../components/card'
 import Row from '../../components/row'
 import Col from '../../components/col'
@@ -12,11 +13,14 @@ export async function getStaticProps() {
     }
 }
 
-export default function Locations ({person}) {
+export default function displayPeople ({person}) {
     return (
         <Layout>
-            <Heading type='h1'>Locations</Heading>
-            <p>Check out our store across the country.</p>
+            <Head>
+                <title>{siteTitle} - People</title>
+            </Head>
+            <Heading type='h1'>People</Heading>
+            <p>Check out our wonderful team members.</p>
             <Row>
                 {person.edges.map((edge, index) => {
                 const {node} = edge;

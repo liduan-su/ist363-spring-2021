@@ -1,6 +1,30 @@
-$starbucks_green: #008248;
+@use '/styles/abstracts/vars';
+@use '/styles/abstracts/mixins';
 
 .footer {
     padding: 1rem;
-    background-color: lightgray;
+    background-color: vars.$color_gray_light;
+    margin-top: 1rem;
+    @include mixins.breakpoint (sm) {
+        display: flex;
+        justify-content: space-between;
+    }
+    a {
+        color: vars.$color_gray_dark;
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+
+ul {
+    &.flexRow{
+        list-style: none;
+        display: flex;
+        margin-bottom: 1rem;
+        li {
+            margin-right: 1rem;
+        }
+    }
 }
